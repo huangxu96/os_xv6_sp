@@ -62,6 +62,8 @@ QEMU = $(shell if which qemu > /dev/null; \
 	elif which qemu-system-x86_64 > /dev/null; \
 	then echo qemu-system-x86_64; exit; \
 	else \
+	qemu=/home/software/qemu/bin/qemu-system-i386; \
+	if test -x $$qemu; then echo $$qemu; exit; fi; \
 	qemu=/Applications/Q.app/Contents/MacOS/i386-softmmu.app/Contents/MacOS/i386-softmmu; \
 	if test -x $$qemu; then echo $$qemu; exit; fi; fi; \
 	echo "***" 1>&2; \

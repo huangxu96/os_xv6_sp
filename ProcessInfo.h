@@ -1,6 +1,5 @@
 #ifndef _PROCESSINFO_H_
 #define _PROCESSINFO_H_
-#include "types.h"
 
 struct ProcessInfo {
    char name[16]; // name of process
